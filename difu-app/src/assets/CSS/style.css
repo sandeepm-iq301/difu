@@ -1,0 +1,451 @@
+.custom-bg-dark{
+    background-color:rgb(0, 0, 0);
+}
+.customs-bg-dark{
+    background-color:rgb(51, 48, 48);
+}
+.overlay {
+    z-index: 9;
+    margin: 30px;
+    
+  }
+  
+.default-col
+{
+    height:20px;
+}
+#fade-out {
+    animation: fadeOut ease 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+    
+  }
+  #fade-in {
+    animation: fadein ease 2s;
+  
+  }
+  
+  @keyframes fadein {
+    100% {
+      opacity: 1;
+    }
+    0% {
+      opacity: 0;
+    }
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+td {
+    text-align: center;
+}
+.lgin{
+    padding:10px;
+    align-items: center;
+     
+}
+.content {
+    position: relative;
+}
+
+.content li {
+    color: #fff;
+    font-size: 8em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.content li:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content li:nth-child(2) {
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background: white;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.custom-col-12{
+    max-height:100%;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(145, 68, 68);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(145, 68, 68);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(145, 68, 68);;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.glows-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(145, 68, 68);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glows-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glows-on-hover:active {
+    color: rgb(145, 68, 68);
+}
+
+.glows-on-hover:active:after {
+    background: transparent;
+}
+
+.glows-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glows-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(145, 68, 68);;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 150px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 40px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  form{margin-top:20px;}
+
+  .card-big-shadow {
+      max-width: 320px;
+      position: relative;
+  }
+  
+  .coloured-cards .card {
+      margin-top: 30px;
+  }
+  
+  .card[data-radius="none"] {
+      border-radius: 0px;
+  }
+  .card {
+      border-radius: 8px;
+      box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+      background-color: #FFFFFF;
+      color: #252422;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+  }
+  
+  
+  .card[data-background="image"] .title, .card[data-background="image"] .stats, .card[data-background="image"] .category, .card[data-background="image"] .description, .card[data-background="image"] .content, .card[data-background="image"] .card-footer, .card[data-background="image"] small, .card[data-background="image"] .content a, .card[data-background="color"] .title, .card[data-background="color"] .stats, .card[data-background="color"] .category, .card[data-background="color"] .description, .card[data-background="color"] .content, .card[data-background="color"] .card-footer, .card[data-background="color"] small, .card[data-background="color"] .content a {
+      color: #FFFFFF;
+  }
+  .card.card-just-text .content {
+      padding: 50px 65px;
+      text-align: center;
+  }
+  .card .content {
+      padding: 20px 20px 10px 20px;
+  }
+  .card[data-color="blue"] .category {
+      color: #7a9e9f;
+  }
+  
+  .card .category, .card .label {
+      font-size: 14px;
+      margin-bottom: 0px;
+  }
+  .card-big-shadow:before {
+      background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      bottom: -12%;
+      content: "";
+      display: block;
+      left: -12%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+  }
+  h4, .h4 {
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 1.2em;
+  }
+  h6, .h6 {
+      font-size: 0.9em;
+      font-weight: 600;
+      text-transform: uppercase;
+  }
+  .card .description {
+      font-size: 16px;
+      color: #66615b;
+  }
+  .content-card{
+      margin-top:30px;    
+  }
+  a:hover, a:focus {
+      text-decoration: none;
+  }
+  
+  /*======== COLORS ===========*/
+  .card[data-color="blue"] {
+      background: #b8d8d8;
+  }
+  .card[data-color="blue"] .description {
+      color: #506568;
+  }
+  
+  .card[data-color="green"] {
+      background: #d5e5a3;
+  }
+  .card[data-color="green"] .description {
+      color: #60773d;
+  }
+  .card[data-color="green"] .category {
+      color: #92ac56;
+  }
+  
+  .card[data-color="yellow"] {
+      background: #ffe28c;
+  }
+  .card[data-color="yellow"] .description {
+      color: #b25825;
+  }
+  .card[data-color="yellow"] .category {
+      color: #d88715;
+  }
+  
+  .card[data-color="brown"] {
+      background: #d6c1ab;
+  }
+  .card[data-color="brown"] .description {
+      color: #75442e;
+  }
+  .card[data-color="brown"] .category {
+      color: #a47e65;
+  }
+  
+  .card[data-color="purple"] {
+      background: #baa9ba;
+  }
+  .card[data-color="purple"] .description {
+      color: #3a283d;
+  }
+  .card[data-color="purple"] .category {
+      color: #5a283d;
+  }
+  
+  .card[data-color="orange"] {
+      background: #ff8f5e;
+  }
+  .card[data-color="orange"] .description {
+      color: #772510;
+  }
+  .card[data-color="orange"] .category {
+      color: #e95e37;
+  }
